@@ -1,11 +1,11 @@
-﻿// Task 27
+﻿// Task 29
 
-Console.WriteLine("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-int sum = 0;
-while (number > 0.1)
+Console.WriteLine("Введите количество элементов массива: ");
+int [] array = new int[Convert.ToInt32(Console.ReadLine())];
+int i = 0;
+while (i < array.Length)
 {
-    sum += number % 10;
-    number = number / 10;
+    array[i] = new Random().Next(1, 100);
+    Console.WriteLine($"Элемент массива № {i} = {array[i]}");
+    i++;
 }
-Console.WriteLine($"Сумма всех цифр в числе: {sum}");
