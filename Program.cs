@@ -1,9 +1,11 @@
-﻿// Task 25
+﻿// Task 27
 
-double raiseToDegree(int number, int degree)
+Console.WriteLine("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
+while (number > 0.1)
 {
-    double result = Math.Pow(number, degree);
-    return result;
+    sum += number % 10;
+    number = number / 10;
 }
-Console.WriteLine("Введите 2 числа: ");
-Console.WriteLine(raiseToDegree(Convert.ToInt32(Console.ReadLine()),Convert.ToInt32(Console.ReadLine())));
+Console.WriteLine($"Сумма всех цифр в числе: {sum}");
